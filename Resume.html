@@ -2,162 +2,243 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <!-- CRITICAL: Added viewport for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theretipally Sanjay - Resume</title>
+    <!-- Added modern font and icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Body and Container Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background: #f4f7f6; /* Lighter background */
+            font-family: 'Inter', sans-serif;
+            background: #f4f6f5;
             margin: 0;
-            padding: 20px;
-            color: #333; /* Slightly darker text for readability */
+            padding: 20px 10px;
+            color: #333;
             line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
         }
 
         .container {
-            max-width: 850px; /* Slightly narrower for better line length */
-            margin: auto;
+            width: 100%;
+            max-width: 850px;
+            margin: 20px auto;
             background: #ffffff;
             padding: 30px;
-            border-radius: 10px; /* Softer corners */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* --- Button Bar Styles (Responsiveness for download links) --- */
+        .button-bar-links {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row; /* Default side-by-side */
+            gap: 15px;
+            justify-content: flex-end; /* Align buttons to the right */
+            padding: 0 10px;
+        }
+
+        .btn-download {
+            display: block; /* Changed from inline-block for full width on mobile */
+            background-color: #1a2332; /* Darker, modern button color */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px; /* Rounded corners */
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        
+        .btn-download:hover {
+            background-color: #0b5cff; /* Blue hover */
+            transform: translateY(-1px);
+        }
+
+        /* Mobile specific styles (buttons stack) */
+        @media (max-width: 600px) {
+            .button-bar-links {
+                flex-direction: column; /* Stack vertically */
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+            }
+            .btn-download {
+                width: 100%; /* Full width buttons for easy tapping */
+                max-width: 300px;
+            }
+            .container {
+                padding: 20px 15px;
+                margin-top: 10px;
+            }
         }
 
         /* Header Styles */
         .header {
-            border-bottom: 3px solid #0b5cff; /* Bold blue line */
+            /* Section line color */
+            border-bottom: 3px solid #0b5cff;
             padding-bottom: 12px;
             margin-bottom: 20px;
+            text-align: center; /* Center for both desktop and mobile */
         }
 
         h1 {
             margin: 0;
-            font-size: 32px; /* Larger name */
-            color: #0b5cff;
+            font-size: 36px;
+            /* Changed color to match section line/title color */
+            color: #0b5cff; 
             text-transform: uppercase;
         }
 
         h3.title {
             margin: 4px 0 0;
-            font-weight: 500; /* Normal weight */
+            font-weight: 500;
             color: #555;
-            font-size: 16px;
+            font-size: 18px;
         }
 
-        .contact-info {
-            margin: 8px 0 0;
+        /* Responsive Contact Info Grid */
+        .contact-info-grid {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2-3 columns on desktop */
+            gap: 8px 15px;
+            justify-items: center;
+            text-align: left;
+        }
+
+        @media (min-width: 768px) {
+            .contact-info-grid {
+                /* Align items to the start on larger screens */
+                justify-items: start;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .contact-info-grid p {
+            margin: 0;
+            display: flex;
+            align-items: center;
             font-size: 14px;
-            color: #666;
         }
 
-        .contact-info a {
+        .contact-info-grid i {
+            color: #0b5cff;
+            margin-right: 6px;
+        }
+        
+        .contact-info-grid a {
             color: #0b5cff;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .contact-info a:hover {
+        .contact-info-grid a:hover {
             text-decoration: underline;
         }
 
         /* Section Header Styles */
         h2 {
+            /* Section title color */
             color: #0b5cff;
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 10px;
-            border-left: 4px solid #0b5cff; /* Accent line for sections */
-            padding-left: 8px;
+            /* Section line color */
+            border-left: 4px solid #0b5cff;
+            padding-left: 10px;
             margin-top: 25px;
+            font-weight: 700;
         }
 
         /* Content Styles */
-        p {
-            margin: 0 0 12px 0;
-        }
+        p { margin: 0 0 12px 0; }
 
         ul {
-            list-style: disc;
-            margin: 0 0 15px 20px;
+            list-style: none;
+            margin: 0 0 15px 0;
             padding: 0;
         }
 
         ul li {
-            margin-bottom: 5px;
-            font-size: 15px;
-        }
-
-        /* Bold/Emphasis for clarity */
-        strong {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .btn-download {
-            display: inline-block;
-            background-color: #555;
-            color: white;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-bottom: 15px;
-            transition: background-color 0.3s;
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
         }
         
-        .btn-download:hover {
-            background-color: #0b5cff;
+        ul li::before {
+            content: "\f058"; /* Checkmark icon from Font Awesome */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #0b5cff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 14px;
+        }
+
+        strong {
+            font-weight: 700;
+            color: #1a2332;
+        }
+
+        .sub-header {
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 4px;
+            margin-top: 15px;
         }
 
         /* Footer Styles */
         .footer {
             border-top: 1px solid #ddd;
-            margin-top: 20px;
+            margin-top: 30px;
             padding-top: 10px;
             font-size: 12px;
             text-align: center;
             color: #777;
         }
-
-        /* Internship/Project Sub-headers */
-        .sub-header {
-            font-weight: bold;
-            color: #444;
-            margin-bottom: 4px;
-            margin-top: 8px;
-        }
     </style>
 </head>
 <body>
-    <a href="https://docs.google.com/document/d/18f31BAgGZ3TslxefgeILagGmFKQUDnTj/edit?usp=sharing&ouid=118041306174064583213&rtpof=true&sd=true" target="_blank" class="btn-download">Infographic Resume</a>
-    <a href="https://docs.google.com/document/d/1EVDJUb-MutNHD_WqSiY_C87vuRvABYSg/edit?usp=sharing&ouid=118041306174064583213&rtpof=true&sd=true" target="_blank" class="btn-download">Traditional  Resume</a>
-
+    <!-- Buttons placed outside the container for separate styling and full responsiveness -->
+    <div class="button-bar-links">
+        <a href="https://docs.google.com/document/d/18f31BAgGZ3TslxefgeILagGmFKQUDnTj/edit?usp=sharing&ouid=118041306174064583213&rtpof=true&sd=true" target="_blank" class="btn-download">
+            <i class="fas fa-file-image"></i> Infographic Resume
+        </a>
+        <a href="https://docs.google.com/document/d/1EVDJUb-MutNHD_WqSiY_C87vuRvABYSg/edit?usp=sharing&ouid=118041306174064583213&rtpof=true&sd=true" target="_blank" class="btn-download">
+            <i class="fas fa-file-pdf"></i> Traditional Resume
+        </a>
+    </div>
 
     <div class="container">
 
         <div class="header">
-            <center>
             <h1>Theretipally Sanjay</h1>
-            <!--h3 class="title">Aspiring Software Developer | AI/ML Enthusiast | Web Developer</h3-->
-            <p class="contact-info">
-                📍 Hyderabad, India | 📞 <a href="tel:+916300903441">+91 6300903441</a> | 
-                ✉️ <a href="mailto:ts.sanjay2007@gmail.com">ts.sanjay2007@gmail.com</a>
-                | PortFolio: <a href="https://sanjay282007.github.io/Sanjay-Portfolio" target="_blank">https://sanjay282007.github.io/Sanjay-Portfolio</a>
-                <br>LinkedIn: <a href="https://www.linkedin.com/in/sanjay-t-93a01b309/" target="_blank">linkedin.com/in/sanjay-t-93a01b309</a> | 
-                GitHub: <a href="https://github.com/Sanjay282007" target="_blank">github.com/Sanjay282007</a>
-            </p>
-            </center>
+            <h3 class="title">Aspiring Software Developer | AI/ML Enthusiast | Web Developer</h3>
+            
+            <!-- Refactored contact info using a responsive grid -->
+            <div class="contact-info-grid">
+                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+916300903441">+91 6300903441</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:ts.sanjay2007@gmail.com">ts.sanjay2007@gmail.com</a></p>
+                <p><i class="fas fa-globe"></i> <a href="https://sanjay282007.github.io/Sanjay-Portfolio" target="_blank">Portfolio</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/sanjay-t-93a01b309/" target="_blank">LinkedIn</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/Sanjay282007" target="_blank">GitHub</a></p>
+            </div>
         </div>
 
+        <!-- 1. Profile Summary -->
         <h2>Profile Summary</h2>
         <p>Motivated CSE (AIML) student with strong expertise in Python, Java, AI/ML, and Web Development. Experienced in developing intelligent systems, debugging large codebases, and building scalable web applications. Passionate about solving real-world problems through technology, with proven internship and hackathon experience.</p>
 
-        <h2>Education</h2>
-        <ul>
-            <li><strong>B.Tech in Computer Science (AIML)</strong> – Vignan Institute of Technology and Science, Hyderabad (Expected April 2027) | CGPA: 8.5</li>
-            <li><strong>Intermediate (MPC)</strong> – SR Junior College, Hyderabad (March 2023) | GPA: 8.77</li>
-            <li><strong>SSC</strong> – Bhashyam High School, Hyderabad (April 2021) | GPA: 10.0</li>
-        </ul>
-
+        <!-- 2. Internships -->
         <h2>Internships</h2>
         <p class="sub-header">Vaultofcodes — Python Programming Intern (April 2025 – May 2025)</p>
         <ul>
@@ -171,13 +252,35 @@
             <li>Collaborated using Git/GitHub for version control.</li>
         </ul>
 
-        <h2>Projects & Achievements</h2>
+        <!-- 3. Hard Skills -->
+        <h2>Hard Skills</h2>
+        <p>
+            <strong>Programming & CS Core:</strong> Python, Java, C, Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)
+            <br>
+            <strong>Web Development:</strong> HTML, CSS, JavaScript, Git/GitHub
+            <br>
+            <strong>AI & ML:</strong> Machine Learning, Artificial Intelligence
+            <br>
+            <strong>Databases & Tools:</strong> MySQL, Git
+        </p>
+
+        <!-- 4. Projects & Achievements -->
+        <h2>Projects & Achievements </h2>
         <ul>
             <li><strong>Hack Your Path 6.0</strong> – 24-hour hackathon (HITAM, Hyderabad), recognized by GDG for teamwork.</li>
             <li><strong>HackVibe 2025</strong> – Designed AI-based solutions in a 24-hour national hackathon at Vignan Institute.</li>
             <li><strong>Flipkart Clone</strong> – Full-stack project replicating Flipkart features (HTML, CSS, JavaScript, backend stack optional).</li>
         </ul>
 
+        <!-- 5. Education -->
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.Tech in Computer Science (AIML)</strong> – Vignan Institute of Technology and Science, Hyderabad (Expected April 2027) | CGPA: 8.5</li>
+            <li><strong>Intermediate (MPC)</strong> – SR Junior College, Hyderabad (March 2023) | GPA: 8.77</li>
+            <li><strong>SSC</strong> – Bhashyam High School, Hyderabad (April 2021) | GPA: 10.0</li>
+        </ul>
+
+        <!-- 6. Certifications -->
         <h2>Certifications</h2>
         <ul>
             <li>IBM SkillsBuild – Getting Started with AI (Nov 2024)</li>
@@ -190,14 +293,9 @@
             <li>OpenAI Academy X NxtWave Buildathon (Sep 2025)</li>
         </ul>
 
-        <h2>Hard Skills</h2>
-        <p><strong>Python</strong>, Java, SQL, HTML, CSS, JavaScript, Git/GitHub, Machine Learning, Artificial Intelligence, Data Structures, Database Management</p>
-
+        <!-- 7. Soft Skills -->
         <h2>Soft Skills</h2>
         <p>Problem-solving, Critical Thinking, Time Management, Team Collaboration, Creativity, Adaptability</p>
-
-        <h2>Action Verbs</h2>
-        <p>Developed • Designed • Debugged • Implemented • Built • Automated • Optimized • Collaborated • Enhanced • Achieved • Improved • Delivered</p>
 
         <div class="footer">
             References available on request • Portfolio & projects available on GitHub
