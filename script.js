@@ -1,4 +1,4 @@
-    const sections = document.querySelectorAll('#main-portfolio main section');
+const sections = document.querySelectorAll('#main-portfolio main section');
 	const navLinks = document.querySelectorAll('.nav-links a');
 	const btnTop = document.getElementById('btnTop');
     const menuToggle = document.querySelector('.menu-toggle');
