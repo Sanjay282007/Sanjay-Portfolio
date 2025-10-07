@@ -1,9 +1,8 @@
-   const sections = document.querySelectorAll('#main-portfolio main section');
+const sections = document.querySelectorAll('#main-portfolio main section');
 	const navLinks = document.querySelectorAll('.nav-links a');
 	const btnTop = document.getElementById('btnTop');
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-links');
-    const landingPageWrapper = document.querySelector('.header-content-wrapper');
     const parallaxBg = document.querySelector('.parallax-bg');
 
 	// Function to update which navigation link is active
@@ -16,7 +15,7 @@
 	}
 
 	// Function to show a specific section in the main portfolio view
-	function showSection(id, event) {
+	window.showSection = function(id, event) {
 		if (event) event.preventDefault();
 
 		if (navMenu.classList.contains('open')) {
@@ -43,7 +42,15 @@
 			}
 
 			updateActiveNav(id);
-			document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+			// Scroll to the top of the main content area (just below the fixed navbar)
+			const mainContent = document.querySelector('main');
+			if (mainContent) {
+                const navHeight = document.querySelector('nav').offsetHeight || 70;
+                window.scrollTo({
+                    top: mainContent.offsetTop - navHeight, 
+                    behavior: 'smooth'
+                });
+            }
 
 		}, 200); // Wait for 200ms before switching content
 	}
@@ -121,9 +128,7 @@
     // --- Parallax Effect Logic ---
     function handleParallax() {
         const scrolled = window.scrollY;
-        
         // Calculate a slight movement for the background image
-        // Divide by a large number (e.g., 5) to make it slower than the scroll speed
         const bgY = scrolled * 0.2; 
         parallaxBg.style.transform = `translateY(${bgY}px)`;
     }
@@ -162,7 +167,8 @@
 			if (btnTop) {
 				const mainPortfolio = document.getElementById('main-portfolio');
 				if (mainPortfolio.style.display === 'block') {
-					btnTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+					// IMPORTANT: Use 'flex' here to correctly center the arrow icon
+					btnTop.style.display = window.scrollY > 300 ? 'flex' : 'none'; 
 				} else {
 					btnTop.style.display = 'none';
 				}
