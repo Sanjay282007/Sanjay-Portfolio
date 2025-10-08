@@ -33,7 +33,7 @@ function rotateProfilePhoto() {
 }
 
 rotateProfilePhoto();
-setInterval(rotateProfilePhoto, 1300); 
+setInterval(rotateProfilePhoto,1300); 
 
 function updateActiveNav(id) {
 	navLinks.forEach(l => l.classList.remove('active'));
