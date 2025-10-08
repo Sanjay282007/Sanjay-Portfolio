@@ -10,8 +10,8 @@ const profileImages = [
     'picture (31).png',
     'picture (59).png',
     'picture (60).png',
-    'picture (66).png',
-    'picture (84).png'
+	'picture (84).png',
+    'picture (66).png'
 ];
 
 let currentImageIndex = 0;
@@ -20,8 +20,12 @@ function rotateProfilePhoto() {
     const imgElement = document.getElementById('profilePhoto');
     
     if (imgElement) {
-        imgElement.src = profileImages[currentImageIndex];
-        currentImageIndex = (currentImageIndex + 1) % profileImages.length;
+        imgElement.classList.add('fade-out');
+        setTimeout(() => {
+            currentImageIndex = (currentImageIndex + 1) % profileImages.length;
+            imgElement.src = profileImages[currentImageIndex];
+            imgElement.classList.remove('fade-out');
+        }, 500); 
         
     } else {
         console.warn("Profile photo element not found. Please ensure your <img> has id='profilePhoto'.");
@@ -29,7 +33,7 @@ function rotateProfilePhoto() {
 }
 
 rotateProfilePhoto();
-setInterval(rotateProfilePhoto, 800); 
+setInterval(rotateProfilePhoto, 1300); 
 
 function updateActiveNav(id) {
 	navLinks.forEach(l => l.classList.remove('active'));
