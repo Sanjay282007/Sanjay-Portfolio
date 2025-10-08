@@ -10,9 +10,16 @@ const profileImages = [
     'picture (31).png',
     'picture (59).png',
     'picture (60).png',
-	'picture (84).png',
-    'picture (66).png'
+    'picture (66).png',
+    'picture (84).png'
 ];
+
+function preloadProfileImages() {
+    profileImages.forEach(src => {
+        new Image().src = src;
+    });
+}
+preloadProfileImages();
 
 let currentImageIndex = 0;
 
@@ -21,6 +28,7 @@ function rotateProfilePhoto() {
     
     if (imgElement) {
         imgElement.classList.add('fade-out');
+
         setTimeout(() => {
             currentImageIndex = (currentImageIndex + 1) % profileImages.length;
             imgElement.src = profileImages[currentImageIndex];
@@ -33,7 +41,7 @@ function rotateProfilePhoto() {
 }
 
 rotateProfilePhoto();
-setInterval(rotateProfilePhoto,1300); 
+setInterval(rotateProfilePhoto, 1200); 
 
 function updateActiveNav(id) {
 	navLinks.forEach(l => l.classList.remove('active'));
