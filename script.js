@@ -40,7 +40,7 @@ function rotateProfilePhoto() {
 }
 
 rotateProfilePhoto();
-setInterval(rotateProfilePhoto, 1200); 
+setInterval(rotateProfilePhoto, 1700); 
 
 function updateActiveNav(id) {
 	navLinks.forEach(l => l.classList.remove('active'));
@@ -197,4 +197,5 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 });
+
 
