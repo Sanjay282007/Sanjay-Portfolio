@@ -6,8 +6,7 @@ const navMenu = document.querySelector('.nav-links');
 const parallaxBg = document.querySelector('.parallax-bg');
 
 const profileImages = [
-	'picture (59).png',
-	'pic.png'
+	'picture (59).png'
 ];
 
 function preloadProfileImages() {
@@ -194,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 });
+
 
 
 
