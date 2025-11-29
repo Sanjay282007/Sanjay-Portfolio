@@ -7,6 +7,7 @@ const parallaxBg = document.querySelector('.parallax-bg');
 
 const profileImages = [
     'picture (84).png',
+	'picture (59).png'
 ];
 
 function preloadProfileImages() {
@@ -193,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 });
+
 
 
 
