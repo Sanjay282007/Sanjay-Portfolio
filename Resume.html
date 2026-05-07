@@ -1,308 +1,489 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <!-- CRITICAL: Added viewport for mobile responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theretipally Sanjay - Resume</title>
-    <!-- Added modern font and icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Body and Container Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f4f6f5;
-            margin: 0;
-            padding: 20px 10px;
-            color: #333;
-            line-height: 1.5;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content horizontally */
-        }
 
-        .container {
-            width: 100%;
-            max-width: 850px;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* --- Button Bar Styles (Responsiveness for download links) --- */
-        .button-bar-links {
-            width: 100%;
-            max-width: 850px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row; /* Default side-by-side */
-            gap: 15px;
-            justify-content: flex-end; /* Align buttons to the right */
-            padding: 0 10px;
-        }
+<meta charset="utf-8">
 
-        .btn-download {
-            display: block; /* Changed from inline-block for full width on mobile */
-            background-color: #1a2332; /* Darker, modern button color */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px; /* Rounded corners */
-            font-size: 15px;
-            font-weight: 600;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.1s;
-        }
-        
-        .btn-download:hover {
-            background-color: #0b5cff; /* Blue hover */
-            transform: translateY(-1px);
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        /* Mobile specific styles (buttons stack) */
-        @media (max-width: 600px) {
-            .button-bar-links {
-                flex-direction: column; /* Stack vertically */
-                align-items: center;
-                gap: 10px;
-                justify-content: center;
-            }
-            .btn-download {
-                width: 100%; /* Full width buttons for easy tapping */
-                max-width: 300px;
-            }
-            .container {
-                padding: 20px 15px;
-                margin-top: 10px;
-            }
-        }
+<title>Theretipally Sanjay - Resume</title>
 
-        /* Header Styles */
-        .header {
-            /* Section line color */
-            border-bottom: 3px solid #0b5cff;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            text-align: center; /* Center for both desktop and mobile */
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
 
-        h1 {
-            margin: 0;
-            font-size: 36px;
-            /* Changed color to match section line/title color */
-            color: #0b5cff; 
-            text-transform: uppercase;
-        }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        h3.title {
-            margin: 4px 0 0;
-            font-weight: 500;
-            color: #555;
-            font-size: 18px;
-        }
+<style>
 
-        /* Responsive Contact Info Grid */
-        .contact-info-grid {
-            margin-top: 15px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 2-3 columns on desktop */
-            gap: 8px 15px;
-            justify-items: center;
-            text-align: left;
-        }
+body{
+font-family:'Inter',sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:20px 10px;
+color:#333;
+display:flex;
+flex-direction:column;
+align-items:center;
+line-height:1.6;
+}
 
-        @media (min-width: 768px) {
-            .contact-info-grid {
-                /* Align items to the start on larger screens */
-                justify-items: start;
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        .contact-info-grid p {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-        }
+.container{
+width:100%;
+max-width:900px;
+background:#fff;
+padding:35px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
 
-        .contact-info-grid i {
-            color: #0b5cff;
-            margin-right: 6px;
-        }
-        
-        .contact-info-grid a {
-            color: #0b5cff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+.button-bar-links{
+width:100%;
+max-width:900px;
+display:flex;
+justify-content:flex-end;
+gap:15px;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
 
-        .contact-info-grid a:hover {
-            text-decoration: underline;
-        }
+.btn-download{
+background:#0b5cff;
+color:white;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
 
-        /* Section Header Styles */
-        h2 {
-            /* Section title color */
-            color: #0b5cff;
-            font-size: 22px;
-            margin-bottom: 10px;
-            /* Section line color */
-            border-left: 4px solid #0b5cff;
-            padding-left: 10px;
-            margin-top: 25px;
-            font-weight: 700;
-        }
+.btn-download:hover{
+background:#003ecb;
+transform:translateY(-2px);
+}
 
-        /* Content Styles */
-        p { margin: 0 0 12px 0; }
+.header{
+text-align:center;
+border-bottom:3px solid #0b5cff;
+padding-bottom:18px;
+margin-bottom:25px;
+}
 
-        ul {
-            list-style: none;
-            margin: 0 0 15px 0;
-            padding: 0;
-        }
+.header h1{
+margin:0;
+font-size:36px;
+font-weight:800;
+color:#0b5cff;
+letter-spacing:1px;
+}
 
-        ul li {
-            margin-bottom: 8px;
-            padding-left: 18px;
-            position: relative;
-        }
-        
-        ul li::before {
-            content: "\f058"; /* Checkmark icon from Font Awesome */
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            color: #0b5cff;
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 14px;
-        }
+.title{
+margin-top:8px;
+font-size:18px;
+font-weight:500;
+color:#555;
+}
 
-        strong {
-            font-weight: 700;
-            color: #1a2332;
-        }
+.contact-info-grid{
+margin-top:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:10px;
+}
 
-        .sub-header {
-            font-weight: 700;
-            color: #444;
-            margin-bottom: 4px;
-            margin-top: 15px;
-        }
+.contact-info-grid p{
+margin:0;
+display:flex;
+align-items:center;
+font-size:14px;
+}
 
-        /* Footer Styles */
-        .footer {
-            border-top: 1px solid #ddd;
-            margin-top: 30px;
-            padding-top: 10px;
-            font-size: 12px;
-            text-align: center;
-            color: #777;
-        }
-    </style>
+.contact-info-grid i{
+color:#0b5cff;
+margin-right:8px;
+}
+
+.contact-info-grid a{
+color:#0b5cff;
+text-decoration:none;
+}
+
+.contact-info-grid a:hover{
+text-decoration:underline;
+}
+
+h2{
+font-size:22px;
+color:#0b5cff;
+margin-top:30px;
+margin-bottom:15px;
+border-left:4px solid #0b5cff;
+padding-left:10px;
+font-weight:700;
+}
+
+.sub-header{
+font-weight:700;
+margin-top:18px;
+margin-bottom:5px;
+color:#222;
+}
+
+ul{
+padding-left:20px;
+margin-top:8px;
+}
+
+li{
+margin-bottom:8px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:15px;
+margin-top:15px;
+}
+
+.skill-box{
+background:#f8f9fc;
+padding:15px;
+border-radius:10px;
+border-left:4px solid #0b5cff;
+}
+
+.skill-box h3{
+margin-top:0;
+font-size:16px;
+color:#0b5cff;
+}
+
+.footer{
+margin-top:30px;
+padding-top:15px;
+border-top:1px solid #ddd;
+text-align:center;
+font-size:13px;
+color:#666;
+}
+
+@media(max-width:600px){
+
+.container{
+padding:22px;
+}
+
+.header h1{
+font-size:28px;
+}
+
+.button-bar-links{
+justify-content:center;
+}
+
+.btn-download{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <!-- Buttons placed outside the container for separate styling and full responsiveness -->
-    <div class="button-bar-links">
-        <a href="https://docs.google.com/document/d/1SGe5a_BJ5K4zfCyCdoA4Rw3Wt0fH7noS/edit?usp=sharing&ouid=118041306174064583213&rtpof=true&sd=true" target="_blank" class="btn-download">
-            <i class="fas fa-file-image"></i> WORD Resume
-        </a>
-        <a href="https://drive.google.com/file/d/1opu89KbSUnpB0ajlrUMy73jgf7z9_Els/view?usp=sharing" target="_blank" class="btn-download">
-            <i class="fas fa-file-pdf"></i> PDF Resume
-        </a>
-    </div>
 
-    <div class="container">
+<div class="button-bar-links">
 
-        <div class="header">
-            <h1>Theretipally Sanjay</h1>
-            <h3 class="title">Aspiring Software Developer | AI/ML Enthusiast | Web Developer</h3>
-            
-            <!-- Refactored contact info using a responsive grid -->
-            <div class="contact-info-grid">
-                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
-                <p><i class="fas fa-phone-alt"></i> <a href="tel:+916300903441">+91 6300903441</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:ts.sanjay2007@gmail.com">ts.sanjay2007@gmail.com</a></p>
-                <p><i class="fas fa-globe"></i> <a href="https://sanjay282007.github.io/Sanjay-Portfolio" target="_blank">Portfolio</a></p>
-                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/sanjay-theretipally" target="_blank">LinkedIn</a></p>
-                <p><i class="fab fa-github"></i> <a href="https://github.com/Sanjay282007" target="_blank">GitHub</a></p>
-            </div>
-        </div>
+<a href="https://docs.google.com/document/d/1SGe5a_BJ5K4zfCyCdoA4Rw3Wt0fH7noS/edit?usp=sharing"
+target="_blank"
+class="btn-download">
 
-        <!-- 1. Profile Summary -->
-        <h2>Profile Summary</h2>
-        <p>Motivated CSE (AIML) student with strong expertise in Python, Java, AI/ML, and Web Development. Experienced in developing intelligent systems, debugging large codebases, and building scalable web applications. Passionate about solving real-world problems through technology, with proven internship and hackathon experience.</p>
+<i class="fas fa-file-word"></i>
+WORD Resume
 
-        <!-- 2. Internships -->
-        <h2>Internships</h2>
-        <p class="sub-header">Vaultofcodes — Python Programming Intern (April 2025 – May 2025)</p>
-        <ul>
-            <li>Debugged and optimized Python codebases, reducing runtime errors by <strong>20%</strong>.</li>
-            <li>Automated data preprocessing pipelines, improving dataset handling speed by <strong>30%</strong>.</li>
-        </ul>
-        <p class="sub-header">Vaultofcodes — Web Development Intern (August 2025 – September 2025)</p>
-        <ul>
-            <li>Built and deployed responsive websites using HTML, CSS, JavaScript, ensuring 100% mobile compatibility.</li>
-            <li>Improved website load time by <strong>25%</strong> through code optimization.</li>
-            <li>Collaborated using Git/GitHub for version control.</li>
-        </ul>
+</a>
 
-        <!-- 3. Hard Skills -->
-        <h2>Hard Skills</h2>
-        <p>
-            <strong>Programming & CS Core:</strong> Python, Java, C, Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)
-            <br>
-            <strong>Web Development:</strong> HTML, CSS, JavaScript, Git/GitHub
-            <br>
-            <strong>Testing:</strong> Manual Testing, SDLC, STLC
-            <br>
-            <strong>AI & ML:</strong> Machine Learning, Artificial Intelligence
-            <br>
-            <strong>Databases & Tools:</strong> MySQL, Git
-        </p>
+<a href="https://drive.google.com/file/d/1opu89KbSUnpB0ajlrUMy73jgf7z9_Els/view?usp=sharing"
+target="_blank"
+class="btn-download">
 
-        <!-- 4. Projects & Achievements -->
-        <h2>Projects & Achievements </h2>
-        <ul>
-            <li><strong>Hack Your Path 6.0</strong> – 24-hour hackathon (HITAM, Hyderabad), recognized by GDG for teamwork.</li>
-            <li><strong>HackVibe 2025</strong> – Designed AI-based solutions in a 24-hour national hackathon at Vignan Institute.</li>
-            <li><strong>Flipkart Clone</strong> – Full-stack project replicating Flipkart features (HTML, CSS, JavaScript, backend stack optional).</li>
-        </ul>
+<i class="fas fa-file-pdf"></i>
+PDF Resume
 
-        <!-- 5. Education -->
-        <h2>Education</h2>
-        <ul>
-            <li><strong>B.Tech in Computer Science (AIML)</strong> – Vignan Institute of Technology and Science, Hyderabad (Expected April 2027) | CGPA: 8.5</li>
-            <li><strong>Intermediate (MPC)</strong> – SR Junior College, Hyderabad (March 2023) | GPA: 8.77</li>
-            <li><strong>SSC</strong> – Bhashyam High School, Hyderabad (April 2021) | GPA: 10.0</li>
-        </ul>
+</a>
 
-        <!-- 6. Certifications -->
-        <h2>Certifications</h2>
-        <ul>
-            <li>IBM SkillsBuild – Getting Started with AI (Nov 2024)</li>
-            <li>NPTEL – Java Programming (May 2025)</li>
-            <li>NPTEL – Programming Data Structure and Algorithm using Python(Sep 2025)</li>
-            <li>SWAYAM – Python Programming (Apr 2024)</li>
-            <li>TASK – Frontend with HTML5 & CSS3 (Sep 2024)</li>
-            <li>Udemy – Python Programming: For Every Beginner (May 2025)</li>
-            <li>Udemy – 100+ Python Coding Practice Test (Jul 2025)</li>
-            <li>OpenAI Academy X NxtWave Buildathon (Sep 2025)</li>
-        </ul>
+</div>
 
-        <!-- 7. Soft Skills -->
-        <h2>Soft Skills</h2>
-        <p>Problem-solving, Critical Thinking, Time Management, Team Collaboration, Creativity, Adaptability</p>
+<div class="container">
 
-        <div class="footer">
-            References available on request • Portfolio & projects available on GitHub
-        </div>
+<!-- ================= HEADER ================= -->
 
-    </div>
+<div class="header">
+
+<h1>THERETIPALLY SANJAY</h1>
+
+<h3 class="title">
+Software Developer | AI & ML Engineer | Web Developer
+</h3>
+
+<div class="contact-info-grid">
+
+<p>
+<i class="fas fa-map-marker-alt"></i>
+Hyderabad, India
+</p>
+
+<p>
+<i class="fas fa-phone-alt"></i>
+<a href="tel:+916309043441">
++91 6309043441
+</a>
+</p>
+
+<p>
+<i class="fas fa-envelope"></i>
+<a href="mailto:ts.sanjay2007@gmail.com">
+ts.sanjay2007@gmail.com
+</a>
+</p>
+
+<p>
+<i class="fab fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/sanjay-theretipally"
+target="_blank">
+LinkedIn
+</a>
+</p>
+
+<p>
+<i class="fab fa-github"></i>
+<a href="https://github.com/Sanjay282007"
+target="_blank">
+GitHub
+</a>
+</p>
+
+<p>
+<i class="fas fa-globe"></i>
+<a href="https://sanjay282007.github.io/Sanjay-Portfolio"
+target="_blank">
+Portfolio
+</a>
+</p>
+
+</div>
+
+</div>
+
+<!-- ================= SUMMARY ================= -->
+
+<h2>Professional Summary</h2>
+
+<p>
+
+Computer Science undergraduate specializing in AI & ML with experience in software development, web development, and machine learning through internships and real-world academic projects.
+
+Skilled in Python, Java, SQL, Data Structures & Algorithms, REST APIs, and frontend development with strong debugging, problem-solving, and Agile collaboration abilities.
+
+Experienced in building production-style web applications and machine learning systems using modern development workflows and Git-based version control.
+
+</p>
+
+<!-- ================= EXPERIENCE ================= -->
+
+<h2>Experience</h2>
+
+<p class="sub-header">
+Web Development Intern — Vault of Codes
+(Aug 2025 – Sep 2025)
+</p>
+
+<ul>
+
+<li>
+Built responsive, cross-browser web interfaces using HTML5, CSS3, and JavaScript following SDLC best practices.
+</li>
+
+<li>
+Optimized front-end assets and rendering pipeline, achieving a 25% reduction in page load time.
+</li>
+
+<li>
+Collaborated in Agile development workflows using Git/GitHub to improve maintainability and UI/UX quality.
+</li>
+
+</ul>
+
+<p class="sub-header">
+Python Programming Intern — Vault of Codes
+(Apr 2025 – May 2025)
+</p>
+
+<ul>
+
+<li>
+Automated data preprocessing pipelines using Python, Pandas, and NumPy, reducing runtime errors by 20%.
+</li>
+
+<li>
+Applied debugging and OOP concepts to improve processing efficiency and code maintainability.
+</li>
+
+<li>
+Consumed REST APIs and visualized processed data using Matplotlib for reporting and analysis.
+</li>
+
+</ul>
+
+<!-- ================= EDUCATION ================= -->
+
+<h2>Education</h2>
+
+<ul>
+
+<li>
+<strong>B.Tech — Computer Science (AI & ML)</strong><br>
+Vignan Institute of Technology and Science<br>
+Expected 2027 | CGPA: 8.5
+</li>
+
+<li>
+<strong>Intermediate (MPC)</strong><br>
+SR Junior College — 2023
+</li>
+
+<li>
+<strong>SSC</strong><br>
+Bhashyam High School — 2021
+</li>
+
+</ul>
+
+<!-- ================= SKILLS ================= -->
+
+<h2>Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-box">
+<h3>Programming</h3>
+<p>Python, Java, C, SQL</p>
+</div>
+
+<div class="skill-box">
+<h3>Web Development</h3>
+<p>HTML5, CSS3, JavaScript, REST APIs, JSON</p>
+</div>
+
+<div class="skill-box">
+<h3>AI & Machine Learning</h3>
+<p>Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Flask</p>
+</div>
+
+<div class="skill-box">
+<h3>Core Computer Science</h3>
+<p>DSA, OOP, DBMS, SDLC, STLC, Debugging</p>
+</div>
+
+<div class="skill-box">
+<h3>Tools & Platforms</h3>
+<p>Git, GitHub, VS Code, Postman, Firebase Studio, Cursor</p>
+</div>
+
+<div class="skill-box">
+<h3>Methodologies</h3>
+<p>Agile/Scrum, Software Engineering, Team Collaboration</p>
+</div>
+
+</div>
+
+<!-- ================= PROJECTS ================= -->
+
+<h2>Projects</h2>
+
+<p class="sub-header">
+Customer Churn Prediction System
+</p>
+
+<ul>
+
+<li>
+Built a machine learning classification model using Scikit-learn, Pandas, and TensorFlow to predict telecom customer churn with 92% accuracy on a 7,000+ record dataset.
+</li>
+
+<li>
+Implemented feature engineering, EDA, preprocessing, and visualization using Matplotlib and Seaborn to improve model precision by 15%.
+</li>
+
+</ul>
+
+<p class="sub-header">
+MedLink – Medication Reminder System
+</p>
+
+<ul>
+
+<li>
+Developed a responsive medication management web application with dose reminders, stock monitoring, expiry alerts, and browser notifications.
+</li>
+
+<li>
+Implemented dashboard functionality, authentication flow, and responsive UI using HTML5, CSS3, JavaScript, and Git/GitHub workflows.
+</li>
+
+</ul>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<h2>Certifications</h2>
+
+<ul>
+
+<li>IBM — Python for Data Science</li>
+
+<li>NPTEL — Programming, Data Structures and Algorithms Using Python</li>
+
+<li>OpenAI Academy × NxtWave — AI Buildathon Participant</li>
+
+<li>Infosys Springboard — Machine Learning Fundamentals</li>
+
+<li>TASK — Frontend Development with HTML5 & CSS3</li>
+
+</ul>
+
+<!-- ================= HACKATHONS ================= -->
+
+<h2>Hackathons & Workshops</h2>
+
+<ul>
+
+<li>
+Hack Your Path 6.0 — Built an AI-powered workflow automation solution in a collaborative environment.
+</li>
+
+<li>
+Hack Vibe 2025 — Developed a machine learning prototype using Scikit-learn and real-world data preprocessing techniques.
+</li>
+
+<li>
+Attended workshops on Frontend Development, SQL, DevOps, and AI & Machine Learning.
+</li>
+
+</ul>
+
+<!-- ================= FOOTER ================= -->
+
+<div class="footer">
+
+References available on request • Portfolio & Projects available on GitHub
+
+</div>
+
+</div>
+
 </body>
 </html>

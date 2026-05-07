@@ -3,295 +3,748 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanjay Theretipally</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<title>Theretipally Sanjay | Software Developer & AI/ML Engineer</title>
+
+<meta name="description"
+content="Portfolio of Theretipally Sanjay, Software Developer and AI & ML Engineer specializing in Python, Machine Learning, Web Development, and scalable applications.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <div class="parallax-bg"></div>
 
+<!-- ================= LANDING PAGE ================= -->
+
 <div id="landing-page">
-    <div class="header-content-wrapper fade-in-1">
-        <header style="z-index: 2; position: relative; width: 100%;">
-            
-            <div class="header-flex-content">
 
-                <div class="text-content">
-                    <h1 class="fade-in-1">Hello, I'm <span class="highlight">Theretipally Sanjay</span></h1>
-                    <p class="tagline fade-in-2">Aspiring Software Developer & AI/ML Enthusiast</p>
-                    
-                    <p class="roles fade-in-3" id="dynamic-roles"></p> 
+<div class="header-content-wrapper fade-in-1">
 
-                    <div class="social-icons fade-in-4">
-                        <a href="mailto:ts.sanjay2007@gmail.com" target="_blank" class="icon-btn email" title="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/sanjay-theretipally" target="_blank" class="icon-btn linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Sanjay282007" target="_blank" class="icon-btn github" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/sanjay_sunny2064/" target="_blank" class="icon-btn instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/916309043441" target="_blank" class="icon-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+<header style="z-index:2; position:relative; width:100%;">
 
-                    <div class="header-buttons fade-in-5">
-                        <a href="#" id="view-profile-btn" class="btn-profile">View Profile</a>
-                        <a href="Resume.html" target="_blank" class="btn-profile btn-secondary-profile">Download Resume</a>
-                    </div>
-                </div>
+<div class="header-flex-content">
 
-                <div class="profile-img-container">
-                    <img
-                        class="profile-img"
-                        src="picture (5).png"
-                        alt="Profile Picture"
-			id="profilePhoto"
-                        onerror="this.onerror=null; this.src='https://placehold.co/160x160/007ACC/FFFFFF?text=ST';"
-                    >
-                </div>
-            </div>
-        </header>
-    </div>
+<div class="text-content">
 
-    <div class="marquee-wrapper">
-        <marquee behavior="scroll" direction="left" scrollamount="5" class="marquee">
-            Specializing in AI/ML, Python, and scalable Web Development | Open to internship and full-time opportunities 🚀
-        </marquee>
-    </div>
+<h1 class="fade-in-1">
+Hello, I'm
+<span class="highlight">Theretipally Sanjay</span>
+</h1>
+
+<p class="tagline fade-in-2">
+Software Developer | AI & ML Engineer | Web Developer
+</p>
+
+<p class="roles fade-in-3" id="dynamic-roles"></p>
+
+<div class="social-icons fade-in-4">
+
+<a href="mailto:ts.sanjay2007@gmail.com"
+target="_blank"
+class="icon-btn email"
+title="Email">
+<i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/sanjay-theretipally"
+target="_blank"
+class="icon-btn linkedin"
+title="LinkedIn">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="https://github.com/Sanjay282007"
+target="_blank"
+class="icon-btn github"
+title="GitHub">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.instagram.com/sanjay_sunny2064/"
+target="_blank"
+class="icon-btn instagram"
+title="Instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://wa.me/916309043441"
+target="_blank"
+class="icon-btn whatsapp"
+title="WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
 </div>
 
+<div class="header-buttons fade-in-5">
 
-<div id="main-portfolio" style="display: none;">
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-back-btn" onclick="showPage('landing-page')">
-                <i class="fas fa-arrow-left"></i>
-            </a>
+<a href="#"
+id="view-profile-btn"
+class="btn-profile">
+View Profile
+</a>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#projects">Projects</a>
-                <a href="#certificates">Certificates</a>
-                <a href="#contact">Contact</a>
-            </div>
+<a href="Resume.html"
+target="_blank"
+class="btn-profile btn-secondary-profile">
+Download Resume
+</a>
 
-            <button class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+</div>
+</div>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="content-box">
-                <p>I'm a highly motivated CSE (AIML) student with a strong foundation in Python and Java, specializing in building intelligent systems and scalable web applications. My passion lies in solving complex, real-world problems using technology and data-driven insights.</p>
-                <p>I am adaptable, committed to continuous learning, and eager to contribute to innovative projects in software development and AI/ML. I approach challenges with a structured, problem-solving mindset.</p>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#skills" onclick="showSection('skills', event)" class="btn-next-section">
-                    Go to Skills <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
+<div class="profile-img-container">
 
-        <section id="skills">
-            <h2>Core Skills & Tech Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Data</h3>
-                    <p>Python, Java, SQL, Data Structures & Algorithms, DBMS, Git, GitHub</p>
-                </div>
-                <div class="skill-category">
-                    <h3>AI & ML</h3>
-                    <p>Machine Learning Fundamentals, Artificial Intelligence Concepts, Prompt Engineering</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
-                    <p>HTML5, CSS3, JavaScript (Basics), Responsive Design, Frontend Optimization</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Professional Attributes</h3>
-                    <p>Problem-solving, Critical Thinking, Team Collaboration, Adaptability</p>
-                </div>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#experience" onclick="showSection('experience', event)" class="btn-next-section">
-                    Go to Experience <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
+<img
+class="profile-img"
+src="picture (5).png"
+alt="Profile Picture"
+id="profilePhoto"
+onerror="this.onerror=null; this.src='https://placehold.co/160x160/007ACC/FFFFFF?text=ST';"
+>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="experience-box">
-                        <h3>Python Programmer – Vaultofcodes</h3>
-                        <p class="dates">April 2025 – May 2025</p>
-                        <ul>
-                            <li>Optimized Python codebases, significantly improving execution time and application stability.</li>
-                            <li>Automated data extraction and preprocessing pipelines, enhancing data handling efficiency.</li>
-                        </ul>
-                        <div style="text-align: left; margin-top: 10px;">
-                            <a href="https://www.linkedin.com/in/sanjay-t-93a01b309/overlay/1759325354915/single-media-viewer?type=DOCUMENT&profileId=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BJZLmgBIdRLSHG5BRQZuJgw%3D%3D" target="_blank" class="btn-proof">View Proof</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="experience-box">
-                        <h3>Web Developer – Vaultofcodes</h3>
-                        <p class="dates">August 2025 – September 2025</p>
-                        <ul>
-                            <li>Developed and deployed fully responsive, modern websites using HTML, CSS, and JavaScript.</li>
-                            <li>Focused on front-end performance optimization for fast load times and seamless user experience.</li>
-                        </ul>
-                        <div style="text-align: right; margin-top: 10px;">
-                            <a href="https://www.linkedin.com/in/sanjay-t-93a01b309/overlay/1759325134117/single-media-viewer?type=DOCUMENT&profileId=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BJZLmgBIdRLSHG5BRQZuJgw%3D%3D" target="_blank" class="btn-proof">View Proof</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#education" onclick="showSection('education', event)" class="btn-next-section">
-                    Go to Education <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
+</div>
 
-        <section id="education">
-            <h2>Academic Profile</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <div class="education-details">
-                        <h3>B.Tech in Computer Science and Engineering (AIML)</h3>
-                        <p>Vignan Institute of Technology and Science, Hyderabad</p>
-                    </div>
-                    <span class="date-tag">Expected April 2027</span>
-                </div>
-                <div class="education-item">
-                    <div class="education-details">
-                        <h3>Intermediate (MPC)</h3>
-                        <p>SR Junior College, Hyderabad</p>
-                    </div>
-                    <span class="date-tag">March 2023</span>
-                </div>
-                <div class="education-item">
-                    <div class="education-details">
-                        <h3>Secondary School Certificate (SSC)</h3>
-                        <p>Bhashyam High School, Hyderabad</p>
-                    </div>
-                    <span class="date-tag">April 2021</span>
-                </div>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#projects" onclick="showSection('projects', event)" class="btn-next-section">
-                    Go to Projects <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
+</div>
+</header>
+</div>
 
-        <section id="projects">
-            <h2>Key Projects & Achievements</h2>
-            <p class="project-note">Explore my work in AI, ML, and Development. Click the titles for details.</p>
-            <div id="projectList">
-                <div class="project-card">
-                    <h3><a href="https://www.linkedin.com/posts/sanjay-t-93a01b309/participated-in-hack-your-path-60-a-24-activity-7329890559399968768-8-IG" target="_blank">Hack Your Path 6.0 – 24-Hour Hackathon</a></h3>
-                    <p>Recognized by GDG for excellence in teamwork and creative problem-solving in a competitive environment.</p>
-                </div>
-                <div class="project-card">
-                    <h3><a href="https://www.linkedin.com/posts/sanjay-t-93a01b309/hackvibe2025-hackathon-innovation-activity-7375889301508694018-FL5b?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo" target="_blank">HackVibe 24-Hour National Hackathon</a></h3>
-                    <p>Successfully designed and presented AI-based solutions, demonstrating proficiency in Machine Learning concepts.</p>
-                </div>
-                <div class="project-card">
-                    <h3><a href="https://github.com/Sanjay282007/Flipkart-clone" target="_blank">E-commerce Clone (Flipkart) – Devtown Bootcamp</a></h3>
-                    <p>Full-stack replication of a major e-commerce platform, showcasing UI/UX implementation and foundational system architecture.</p>
-                    <div class="cert-buttons">
-                        <a href="https://www.cert.devtown.in/verify/ZoQqim" target="_blank" class="btn-badge">Devtown Cert.</a>
-                        <a href="https://www.cert.devtown.in/verify/Z1ElQNr" target="_blank" class="btn-badge">GDG Cert.</a>
-                        <a href="https://www.cert.devtown.in/verify/Z1XtALu" target="_blank" class="btn-badge">Microsoft Cert.</a>
-                    </div>
-                </div>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#certificates" onclick="showSection('certificates', event)" class="btn-next-section">
-                    Go to Certificates <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
+<div class="marquee-wrapper">
 
-        <section id="certificates">
-            <h2>Certifications</h2>
-            <p class="cert-note">Verified badges and certificates demonstrating proficiency in various technical domains.</p>
-            <div class="cert-list">
-                <a href="https://www.credly.com/go/7Lx9OHfR" target="_blank" class="cert-link">IBM – AI Fundamentals</a>
-                <a href="https://openai-buildathon.nxtwave.tech/certificate?cid=XACCATEX0Q" target="_blank" class="cert-link">OpenAI Academy X NxtWave Buildathon</a>
-                <a href="https://www.linkedin.com/posts/sanjay-t-93a01b309/java-programming-activity-7331649290722811904-vXTg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo" target="_blank" class="cert-link">NPTEL – Programming in Java</a>
-                <a href="https://www.linkedin.com/posts/sanjay-t-93a01b309/programming-data-structures-and-algorithms-activity-7378116136594468864-hLhm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo" target="_blank" class="cert-link">NPTEL – Programming Data Structure and Algorithm using Python</a>
-                <a href="https://onlinecourses.swayam2.ac.in/cec24_cs01/certificate?q=KN2U6Wn8/WtAnZw3uSUfYpRWZUratQoQ0agEgC5264havDVIzh1zG7vljVQFeLHC" target="_blank" class="cert-link">SWAYAM – Python Programming</a>
-                <a href="https://www.linkedin.com/posts/sanjay-t-93a01b309/frontenddevelopment-html5-css3-activity-7353334058711404545-n69K?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE59sH4Ber7srVz4Q0vF85Z27C2KgevPSNo" target="_blank" class="cert-link">TASK – HTML5 & CSS3</a>
-                <a href="https://www.udemy.com/certificate/UC-32c9b676-e60c-40a8-9510-5c627ddb55be/" target="_blank" class="cert-link">Udemy – Python for Beginners</a>
-                <a href="https://www.udemy.com/certificate/UC-8da87d00-68bc-49a8-a53c-83fd4aa72371/" target="_blank" class="cert-link">Udemy – Python Practice Test</a>
-                <a href="https://www.linkedin.com/in/sanjay-theretipally/recent-activity/all/" target="_blank" class="btn-profile">LinkedIn-Posts(for more  certificates)</a>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#contact" onclick="showSection('contact', event)" class="btn-next-section">
-                    Go to Contact <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
+<marquee behavior="scroll"
+direction="left"
+scrollamount="5"
+class="marquee">
 
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                    <h3>Email</h3>
-                    <p><a href="mailto:ts.sanjay2007@gmail.com" class="contact-link">ts.sanjay2007@gmail.com</a></p>
-                </div>
+Python • Java • Machine Learning • REST APIs • Web Development • Open to Internship & Full-Time Opportunities 🚀
 
-                <div class="contact-card">
-                    <span class="contact-icon"><i class="fab fa-whatsapp"></i></span>
-                    <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/916309043441" target="_blank" class="contact-link">+91 6309043441</a></p>
-                </div>
+</marquee>
 
-                <div class="contact-card">
-                    <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/sanjay-theretipally/" target="_blank" class="contact-link">/sanjay-t-93a01b309</a></p>
-                </div>
+</div>
+</div>
 
-                <div class="contact-card">
-                    <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
-                    <h3>Phone</h3>
-                    <p>+91 6309043441</p>
-                </div>
-                <div class="contact-card">
-                    <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                    <h3>Location</h3>
-                    <p>Hyderabad, Telangana, India</p>
-                </div>
-            </div>
-            <div class="section-nav-footer">
-                <a href="#" onclick="showPage('landing-page'); return false;" class="btn-next-section">
-                    Back to Welcome Screen <i class="fas fa-arrow-up"></i>
-                </a>
-            </div>
-        </section>
-    </main>
-    <footer><p>© 2025 Sanjay Theretipally | Designed for Innovation and Professionalism</p></footer>
+<!-- ================= MAIN PORTFOLIO ================= -->
+
+<div id="main-portfolio" style="display:none;">
+
+<nav>
+
+<div class="nav-container">
+
+<a href="#"
+class="nav-back-btn"
+onclick="showPage('landing-page')">
+<i class="fas fa-arrow-left"></i>
+</a>
+
+<div class="nav-links">
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#highlights">Highlights</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<button class="menu-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</button>
+
+</div>
+</nav>
+
+<main>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="content-box">
+
+<p>
+Computer Science undergraduate specializing in AI & ML with hands-on experience in software development, machine learning, and responsive web applications.
+</p>
+
+<p>
+Skilled in Python, Java, SQL, Data Structures & Algorithms, and frontend development with experience building production-style projects using REST APIs, Git/GitHub workflows, Agile methodologies, and modern debugging practices.
+</p>
+
+<p>
+Passionate about solving real-world problems through scalable software systems, machine learning models, and user-focused applications.
+</p>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#skills"
+onclick="showSection('skills', event)"
+class="btn-next-section">
+
+Go to Skills
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<h2>Skills & Technologies</h2>
+
+<div class="skills-grid">
+
+<div class="skill-category">
+<h3>Programming Languages</h3>
+<p>Python, Java, C, SQL</p>
+</div>
+
+<div class="skill-category">
+<h3>Web Development</h3>
+<p>HTML5, CSS3, JavaScript, REST APIs, JSON</p>
+</div>
+
+<div class="skill-category">
+<h3>AI & Machine Learning</h3>
+<p>Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Flask</p>
+</div>
+
+<div class="skill-category">
+<h3>Core Computer Science</h3>
+<p>DSA, OOP, DBMS, SDLC, STLC, Debugging, Software Engineering</p>
+</div>
+
+<div class="skill-category">
+<h3>Tools & Platforms</h3>
+<p>Git, GitHub, VS Code, Postman, Firebase Studio, Cursor</p>
+</div>
+
+<div class="skill-category">
+<h3>Methodologies</h3>
+<p>Agile/Scrum, Team Collaboration, Problem Solving</p>
+</div>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#highlights"
+onclick="showSection('highlights', event)"
+class="btn-next-section">
+
+Go to Core Strengths
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= HIGHLIGHTS ================= -->
+
+<section id="highlights">
+
+<h2>Core Strengths</h2>
+
+<div class="skills-grid">
+
+<div class="skill-category">
+<h3>Software Development</h3>
+<p>
+Experience building responsive web applications using HTML, CSS, JavaScript, and Python.
+</p>
+</div>
+
+<div class="skill-category">
+<h3>Machine Learning</h3>
+<p>
+Worked on beginner-level machine learning projects using Python, Pandas, and Scikit-learn.
+</p>
+</div>
+
+<div class="skill-category">
+<h3>Team Collaboration</h3>
+<p>
+Participated in internships and hackathons while working in collaborative environments.
+</p>
+</div>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#experience"
+onclick="showSection('experience', event)"
+class="btn-next-section">
+
+Go to Experience
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience">
+
+<h2>Professional Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="experience-box">
+
+<h3>Web Development Intern — Vault of Codes</h3>
+
+<p class="dates">
+August 2025 – September 2025
+</p>
+
+<ul>
+
+<li>
+Built responsive, cross-browser web interfaces using HTML5, CSS3, and JavaScript following SDLC best practices.
+</li>
+
+<li>
+Optimized front-end assets and rendering pipeline, achieving a 25% reduction in page load time.
+</li>
+
+<li>
+Collaborated in an Agile environment using Git/GitHub to implement UI/UX standards and improve maintainability.
+</li>
+
+</ul>
+
+</div>
+</div>
+
+<div class="timeline-item">
+
+<div class="experience-box">
+
+<h3>Python Programming Intern — Vault of Codes</h3>
+
+<p class="dates">
+April 2025 – May 2025
+</p>
+
+<ul>
+
+<li>
+Automated data preprocessing pipelines using Python, Pandas, and NumPy, reducing runtime errors by 20%.
+</li>
+
+<li>
+Applied debugging and OOP concepts to improve workflow efficiency and code maintainability.
+</li>
+
+<li>
+Consumed REST APIs and visualized processed data using Matplotlib for reporting and analysis.
+</li>
+
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#education"
+onclick="showSection('education', event)"
+class="btn-next-section">
+
+Go to Education
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="education-list">
+
+<div class="education-item">
+
+<div class="education-details">
+
+<h3>B.Tech — Computer Science (AI & ML)</h3>
+
+<p>
+Vignan Institute of Technology and Science
+</p>
+
+</div>
+
+<span class="date-tag">
+Expected 2027 | CGPA: 8.5
+</span>
+
+</div>
+
+<div class="education-item">
+
+<div class="education-details">
+
+<h3>Intermediate (MPC)</h3>
+
+<p>
+SR Junior College
+</p>
+
+</div>
+
+<span class="date-tag">
+2023
+</span>
+
+</div>
+
+<div class="education-item">
+
+<div class="education-details">
+
+<h3>SSC</h3>
+
+<p>
+Bhashyam High School
+</p>
+
+</div>
+
+<span class="date-tag">
+2021
+</span>
+
+</div>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#projects"
+onclick="showSection('projects', event)"
+class="btn-next-section">
+
+Go to Projects
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div id="projectList">
+
+<!-- Project 1 -->
+
+<div class="project-card">
+
+<h3>
+Customer Churn Prediction System
+</h3>
+
+<p>
+Built a machine learning classification model using Scikit-learn, Pandas, and TensorFlow to predict telecom customer churn with 92% accuracy on a 7,000+ record dataset.
+</p>
+
+<p>
+Implemented feature engineering, EDA, preprocessing, and visualization using Matplotlib and Seaborn to improve model precision by 15%.
+</p>
+
+<div class="cert-buttons">
+
+<span class="btn-badge">Python</span>
+<span class="btn-badge">TensorFlow</span>
+<span class="btn-badge">Scikit-learn</span>
+<span class="btn-badge">Pandas</span>
+
+</div>
+
+</div>
+
+<!-- Project 2 -->
+
+<div class="project-card">
+
+<h3>
+MedLink – Medication Reminder System
+</h3>
+
+<p>
+Developed a responsive medication management web application with dose reminders, stock monitoring, expiry alerts, and browser notifications.
+</p>
+
+<p>
+Implemented dashboard functionality, user authentication flow, and responsive UI using HTML5, CSS3, JavaScript, and Git/GitHub workflows.
+</p>
+
+<div class="cert-buttons">
+
+<span class="btn-badge">HTML5</span>
+<span class="btn-badge">CSS3</span>
+<span class="btn-badge">JavaScript</span>
+<span class="btn-badge">GitHub</span>
+
+</div>
+
+</div>
+
+<!-- Project 3 -->
+
+<div class="project-card">
+
+<h3>
+Hackathons & Innovation
+</h3>
+
+<p>
+Participated in Hack Your Path 6.0 and Hack Vibe 2025, contributing to AI-powered workflow automation tools and machine learning prototypes in collaborative team environments.
+</p>
+
+<div class="cert-buttons">
+
+<span class="btn-badge">AI</span>
+<span class="btn-badge">Machine Learning</span>
+<span class="btn-badge">Team Collaboration</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#certificates"
+onclick="showSection('certificates', event)"
+class="btn-next-section">
+
+Go to Certificates
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section id="certificates">
+
+<h2>Certifications</h2>
+
+<div class="cert-list">
+
+<a href="#"
+class="cert-link">
+IBM — Python for Data Science
+</a>
+
+<a href="#"
+class="cert-link">
+NPTEL — Programming, Data Structures and Algorithms Using Python
+</a>
+
+<a href="#"
+class="cert-link">
+OpenAI Academy × NxtWave — AI Buildathon Participant
+</a>
+
+<a href="#"
+class="cert-link">
+Infosys Springboard — Machine Learning Fundamentals
+</a>
+
+<a href="#"
+class="cert-link">
+TASK — Frontend Development with HTML5 & CSS3
+</a>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#contact"
+onclick="showSection('contact', event)"
+class="btn-next-section">
+
+Go to Contact
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2>Get In Touch</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<span class="contact-icon">
+<i class="fas fa-envelope"></i>
+</span>
+
+<h3>Email</h3>
+
+<p>
+<a href="mailto:ts.sanjay2007@gmail.com"
+class="contact-link">
+ts.sanjay2007@gmail.com
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<span class="contact-icon">
+<i class="fab fa-whatsapp"></i>
+</span>
+
+<h3>WhatsApp</h3>
+
+<p>
+<a href="https://wa.me/916309043441"
+target="_blank"
+class="contact-link">
++91 6309043441
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<span class="contact-icon">
+<i class="fab fa-linkedin"></i>
+</span>
+
+<h3>LinkedIn</h3>
+
+<p>
+<a href="https://www.linkedin.com/in/sanjay-theretipally"
+target="_blank"
+class="contact-link">
+linkedin.com/in/sanjay-theretipally
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<span class="contact-icon">
+<i class="fab fa-github"></i>
+</span>
+
+<h3>GitHub</h3>
+
+<p>
+<a href="https://github.com/Sanjay282007"
+target="_blank"
+class="contact-link">
+github.com/Sanjay282007
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<span class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</span>
+
+<h3>Location</h3>
+
+<p>
+Hyderabad, Telangana, India
+</p>
+
+</div>
+
+</div>
+
+<div class="section-nav-footer">
+
+<a href="#"
+onclick="showPage('landing-page'); return false;"
+class="btn-next-section">
+
+Back to Welcome Screen
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 Theretipally Sanjay | Software Developer & AI/ML Engineer
+</p>
+
+</footer>
+
 </div>
 
 <button id="btnTop">↑</button>
 
 <script src="script.js" defer></script>
+
 </body>
 </html>
-
-
-
-
-
-
-
