@@ -572,3 +572,48 @@ footer { text-align: center; padding: 20px; background: var(--card-bg); border-t
         justify-content: center;
     }
 }
+.exp-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.company{
+    color:#00d4ff;
+    font-size:0.9rem;
+    font-weight:600;
+}
+
+.experience-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:25px;
+    transition:0.4s ease;
+    backdrop-filter:blur(12px);
+}
+
+.experience-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 35px rgba(0,212,255,0.25);
+}
+
+.tech-stack{
+    margin-top:15px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech-stack span{
+    background:rgba(0,212,255,0.15);
+    color:#00d4ff;
+    padding:6px 14px;
+    border-radius:50px;
+    font-size:0.85rem;
+    font-weight:600;
+}
+
